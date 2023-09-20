@@ -1,0 +1,70 @@
+{
+  "Player": {
+    "$defs": {
+      "School": {
+        "properties": {
+          "name": {
+            "default": null,
+            "title": "Name",
+            "type": "string"
+          },
+          "city": {
+            "default": null,
+            "title": "City",
+            "type": "string"
+          }
+        },
+        "title": "School",
+        "type": "object"
+      }
+    },
+    "properties": {
+      "name": {
+        "default": null,
+        "title": "Name",
+        "type": "string"
+      },
+      "team": {
+        "default": null,
+        "title": "Team",
+        "type": "string"
+      },
+      "position": {
+        "default": null,
+        "title": "Position",
+        "type": "string"
+      },
+      "number": {
+        "default": null,
+        "title": "Number",
+        "type": "integer"
+      },
+      "school": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/School"
+          }
+        ],
+        "default": null
+      }
+    },
+    "title": "Player",
+    "type": "object"
+  },
+  "School": {
+    "properties": {
+      "name": {
+        "default": null,
+        "title": "Name",
+        "type": "string"
+      },
+      "city": {
+        "default": null,
+        "title": "City",
+        "type": "string"
+      }
+    },
+    "title": "School",
+    "type": "object"
+  }
+}
